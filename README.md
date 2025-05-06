@@ -19,7 +19,8 @@ This project simulates a realistic phishing attack to help teach others how easi
 ```bash
 git clone https://github.com/yourusername/phishing-awareness-demo.git
 cd phishing-awareness-demo 
-### 2. python -m http.server 8000 --bind 0.0.0.0
+### 2. Start a local server
+```bash Python -m http.server 8000 --bind 0.0.0.0
 
 ### 3. Find Your Local IP
 Run ipconfig (Windows) or ifconfig (Mac/Linux) and look for your IP (e.g., 10.0.0.243).
