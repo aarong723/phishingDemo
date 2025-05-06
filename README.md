@@ -18,12 +18,26 @@ This project simulates a realistic phishing attack to help teach others how easi
 ### 1. Clone or Download This Repo
 ```bash
 git clone https://github.com/yourusername/phishing-awareness-demo.git
-cd phishing-awareness-demo 
-### 2. Start a local server
-```bash Python -m http.server 8000 --bind 0.0.0.0
+cd phishing-awareness-demo
+```
+
+### 2. Start a Local Server
+```bash
+python -m http.server 8000 --bind 0.0.0.0
+```
 
 ### 3. Find Your Local IP
-Run ipconfig (Windows) or ifconfig (Mac/Linux) and look for your IP (e.g., 10.0.0.243).
+```bash
+# On Windows
+ipconfig
+
+# On Mac/Linux
+ifconfig
+```
+Look for an IP address like `10.0.0.243` or `192.168.x.x`.
 
 ### 4. Share the Link on the Same Wi-Fi Network
-Open email.html in a browser to simulate the phishing email.
+```bash
+http://<your-local-ip>:8000/email.html
+```
+Open this link in a browser to simulate the phishing email. Clicking "Verify Account" will take users to the fake login page (`index.html`) and reveal the simulation after form submission.
