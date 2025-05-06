@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Amazon Sign-In</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f3f3f3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+      padding-top: 50px;
+    }
+    .logo {
+      margin-bottom: 20px;
+    }
+    .container {
+      background-color: white;
+      border: 1px solid #ddd;
+      padding: 20px;
+      width: 300px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .container h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 8px;
+      margin: 8px 0;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: #f0c14b;
+      border-color: #a88734;
+      padding: 10px;
+      width: 100%;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+    .message {
+      margin-top: 20px;
+      color: red;
+      font-weight: bold;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon logo" width="120" />
+  
+  <div class="container">
+    <h1>Sign-In</h1>
+    <form id="loginForm">
+      <label for="email">Email or mobile phone number</label>
+      <input type="email" id="email" required>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" required>
+
+      <button type="submit">Sign-In</button>
+    </form>
+    <div class="message" id="message">Be careful! Your data is safe, but this was a fake site.</div>
+  </div>
+
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      // Do not store or send data
+      document.getElementById('message').style.display = 'block';
+    });
+  </script>
+</body>
+</html>
