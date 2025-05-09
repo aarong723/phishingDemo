@@ -9,7 +9,7 @@ This project simulates a realistic phishing attack to help teach others how easi
 ## 📂 Project Contents
 
 - `index.html` – Fake Amazon login page that displays a warning after login.
-- `email.html` – A sample phishing email styled like a security alert from Amazon, containing a link to `email.html`.
+- `email.html` – A sample phishing email styled like a security alert from Amazon, containing a link to `index.html`.
 
 ---
 
